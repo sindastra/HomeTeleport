@@ -1,0 +1,7 @@
+main: com.github.sindastra.HomeTeleport.Main
+version: v0.0.1
+name: HomeTeleport
+commands:
+    home:
+        description: Teleports a user to their bed.
+        usage: /home
