@@ -1,6 +1,6 @@
 /**
  *  HomeTeleport
- *  Copyright (C) 2014 Sindastra. All rights reserved.
+ *  Copyright (C) 2016 Sindastra. All rights reserved.
  *  https://github.com/sindastra/HomeTeleport
  * 
  * HomeTeleport is a simple Bukkit plugin to teleport a player home to their bed.
@@ -17,7 +17,7 @@
  * THE SOFTWARE.
  * 
  * @author Sindastra <sindastra+github@gmail.com>
- * @copyright (C) 2014 Sindastra. All rights reserved.
+ * @copyright (C) 2016 Sindastra. All rights reserved.
  */
 
 package com.github.sindastra.HomeTeleport;
