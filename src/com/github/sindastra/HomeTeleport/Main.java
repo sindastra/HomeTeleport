@@ -31,8 +31,14 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
 	
+	private boolean lightningOnDeparture;
+	private boolean lightningOnArrival;
+	
 	@Override
 	public void onEnable() {
+		saveDefaultConfig();
+		lightningOnDeparture = getConfig().getBoolean("lightning-on-departure");
+		lightningOnArrival = getConfig().getBoolean("lightning-on-arrival");
 		getLogger().info("Enabled.");
 	}
 	
@@ -50,7 +56,15 @@ public class Main extends JavaPlugin {
 				Player player = (Player) sender;
 				Location bedLoc = (Location) player.getBedSpawnLocation();
 				if( bedLoc != null )
+				{
+					if(lightningOnDeparture)
+						player.getWorld().strikeLightningEffect(player.getLocation());
+					
 					player.teleport(bedLoc);
+					
+					if(lightningOnArrival)
+						player.getWorld().strikeLightningEffect(bedLoc);
+				}
 				else
 					player.sendMessage( ChatColor.RED + "No bed found!" );
 			}
