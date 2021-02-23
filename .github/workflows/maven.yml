@@ -9,13 +9,13 @@ on:
     paths:
       - '**.java'
       - 'pom.xml'
-      - 'maven.yml'
+      - '.github/workflows/maven.yml'
   pull_request:
     branches: [ master ]
     paths:
       - '**.java'
       - 'pom.xml'
-      - 'maven.yml'
+      - '.github/workflows/maven.yml'
 
 jobs:
   build:
